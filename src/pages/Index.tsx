@@ -19,7 +19,7 @@ import {
   Sparkles,
   DollarSign,
   TreePine,
-  Paw
+  Dog  // Replaced Paw with Dog, which is available in lucide-react
 } from "lucide-react";
 
 const Index = () => {
@@ -119,7 +119,7 @@ const Index = () => {
     {
       title: "Wildlife Guardian",
       description: "Protect and monitor wildlife",
-      icon: <Paw className="w-6 h-6" />,
+      icon: <Dog className="w-6 h-6" />, // Changed from Paw to Dog
       color: "bg-yellow-50",
       route: "/wildlife"
     }
