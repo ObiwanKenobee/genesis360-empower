@@ -3,7 +3,24 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Activity, Leaf, LineChart, Microscope } from "lucide-react";
+import { 
+  ArrowRight, 
+  Activity, 
+  Leaf, 
+  LineChart, 
+  Microscope,
+  Brain,
+  Link,
+  Vote,
+  Home,
+  Briefcase,
+  HeartPulse,
+  Search,
+  Sparkles,
+  DollarSign,
+  TreePine,
+  Paw
+} from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -16,28 +33,95 @@ const Index = () => {
 
   const features = [
     {
+      title: "Home Dashboard",
+      description: "Your personalized command center for all Genesis360 features",
+      icon: <Home className="w-6 h-6" />,
+      color: "bg-blue-50",
+      route: "/home"
+    },
+    {
+      title: "AI Discernment",
+      description: "AI-powered ethical insights and recommendations",
+      icon: <Brain className="w-6 h-6" />,
+      color: "bg-purple-50",
+      route: "/discernment"
+    },
+    {
       title: "Healthcare",
       description: "AI-powered health insights and recommendations",
       icon: <Activity className="w-6 h-6" />,
-      color: "bg-rose-50"
+      color: "bg-rose-50",
+      route: "/healthcare"
     },
     {
       title: "Sustainability",
       description: "Track and improve your environmental impact",
       icon: <Leaf className="w-6 h-6" />,
-      color: "bg-emerald-50"
+      color: "bg-emerald-50",
+      route: "/sustainability"
     },
     {
       title: "Investments",
       description: "Purpose-driven impact investment opportunities",
       icon: <LineChart className="w-6 h-6" />,
-      color: "bg-amber-50"
+      color: "bg-amber-50",
+      route: "/investments"
     },
     {
       title: "Research",
       description: "Contribute to global medical research",
       icon: <Microscope className="w-6 h-6" />,
-      color: "bg-violet-50"
+      color: "bg-violet-50",
+      route: "/research"
+    },
+    {
+      title: "Blockchain",
+      description: "Transparent tracking of transactions and impact",
+      icon: <Link className="w-6 h-6" />,
+      color: "bg-cyan-50",
+      route: "/blockchain"
+    },
+    {
+      title: "Election Transparency",
+      description: "Monitor and verify election data",
+      icon: <Vote className="w-6 h-6" />,
+      color: "bg-orange-50",
+      route: "/election"
+    },
+    {
+      title: "Health Dashboard",
+      description: "Monitor your health metrics and progress",
+      icon: <HeartPulse className="w-6 h-6" />,
+      color: "bg-pink-50",
+      route: "/health-dashboard"
+    },
+    {
+      title: "Smart UI",
+      description: "Adaptive interface powered by AI",
+      icon: <Sparkles className="w-6 h-6" />,
+      color: "bg-indigo-50",
+      route: "/smart-ui"
+    },
+    {
+      title: "Socioeconomic Impact",
+      description: "Track your social and economic impact",
+      icon: <DollarSign className="w-6 h-6" />,
+      color: "bg-green-50",
+      route: "/socioeconomic"
+    },
+    {
+      title: "Climate Action",
+      description: "Take action against climate change",
+      icon: <TreePine className="w-6 h-6" />,
+      color: "bg-teal-50",
+      route: "/climate"
+    },
+    {
+      title: "Wildlife Guardian",
+      description: "Protect and monitor wildlife",
+      icon: <Paw className="w-6 h-6" />,
+      color: "bg-yellow-50",
+      route: "/wildlife"
     }
   ];
 
@@ -71,9 +155,12 @@ const Index = () => {
             }
           }}
         >
-          {features.map((feature, index) => (
+          {features.map((feature) => (
             <motion.div key={feature.title} variants={fadeIn}>
-              <Card className="relative overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow duration-300">
+              <Card 
+                className="relative overflow-hidden group cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                onClick={() => navigate(feature.route)}
+              >
                 <div className="p-6">
                   <div className={`${feature.color} p-3 rounded-lg inline-block mb-4`}>
                     {feature.icon}
