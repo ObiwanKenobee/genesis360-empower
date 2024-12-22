@@ -4,6 +4,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Home from "./pages/Home";
+import Healthcare from "./pages/Healthcare";
+import Sustainability from "./pages/Sustainability";
+import Discernment from "./pages/Discernment";
+import Blockchain from "./pages/Blockchain";
 import Dashboard from "./pages/Dashboard";
 
 const queryClient = new QueryClient();
@@ -16,14 +21,14 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/discernment" element={<Discernment />} />
+          <Route path="/healthcare" element={<Healthcare />} />
+          <Route path="/sustainability" element={<Sustainability />} />
+          <Route path="/blockchain" element={<Blockchain />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/home" element={<Dashboard />} />
-          <Route path="/discernment" element={<Dashboard />} />
-          <Route path="/healthcare" element={<Dashboard />} />
-          <Route path="/sustainability" element={<Dashboard />} />
           <Route path="/investments" element={<Dashboard />} />
           <Route path="/research" element={<Dashboard />} />
-          <Route path="/blockchain" element={<Dashboard />} />
           <Route path="/election" element={<Dashboard />} />
           <Route path="/health-dashboard" element={<Dashboard />} />
           <Route path="/smart-ui" element={<Dashboard />} />
