@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useNavigate } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Activity, Leaf, LineChart, Flask } from "lucide-react";
+import { ArrowRight, Activity, Leaf, LineChart, Microscope } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -36,7 +36,7 @@ const Index = () => {
     {
       title: "Research",
       description: "Contribute to global medical research",
-      icon: <Flask className="w-6 h-6" />,
+      icon: <Microscope className="w-6 h-6" />,
       color: "bg-violet-50"
     }
   ];
